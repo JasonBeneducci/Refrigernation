@@ -1,0 +1,12 @@
+<h1>Please add fruits to your cart</h1>
+<%@fruits.each do |fruit|%>
+    <%=form_for fruit do |f|%>
+        <%=fruit.name%><br>
+        <%=fruit.image%><br>
+        Quantity: <br>
+        
+    <%end%>
+<%end%>
+
+
+

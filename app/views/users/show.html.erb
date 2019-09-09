@@ -5,4 +5,5 @@
         <li><font size="50"><%=link_to fruit.image, item_path(Item.find_by(fruit: fruit, user: @user))%></font></li>
     <%end%>
 </ul>
+<%=button_to "Buy more", cart_path, method: :get%>
 <%=button_to "Log Out", logout_path, method: :delete%>
