@@ -1,0 +1,12 @@
+<h1>Create a New User</h1>
+
+<%if flash[:messages]%>
+    <%=flash[:messages][0]%>
+<%end%>
+<%= form_for @user do |f| %>
+  Name: <%= f.text_field :name, placeholder: "Enter Name"%><br />
+  Username: <%= f.text_field :username, placeholder: "Enter Username" %><br />
+  Password: <%= f.password_field :password, placeholder: "Enter Password" %><br />
+  Confirm Password: <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %><br />
+  <%= f.submit "Sign Up"%>
+<% end %>

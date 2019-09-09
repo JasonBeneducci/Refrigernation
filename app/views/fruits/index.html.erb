@@ -1,0 +1,6 @@
+<h1>All Fruits</h1>
+<ul>
+    <%@fruits.each do |fruit|%>
+        <li><%=link_to fruit.name, fruit_path(fruit)%></li>
+    <%end%>
+</ul>
