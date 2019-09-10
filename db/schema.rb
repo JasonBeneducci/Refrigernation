@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_06_190731) do
+ActiveRecord::Schema.define(version: 2019_09_10_174002) do
 
   create_table "fruits", force: :cascade do |t|
     t.string "name"
@@ -25,12 +25,13 @@ ActiveRecord::Schema.define(version: 2019_09_06_190731) do
     t.integer "smoothie_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "quantity"
   end
 
   create_table "items", force: :cascade do |t|
     t.integer "user_id"
     t.integer "fruit_id"
-    t.integer "quantity"
+    t.float "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
