@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   resources :fruits, only: [:index, :show]
   resources :items, only: [:show]
   resources :smoothies, only: [:index, :show]
+
+  get "/smoothies/:id/make", to: "smoothies#make_smoothie", as: "make_smoothie"
+
   
 
 end
