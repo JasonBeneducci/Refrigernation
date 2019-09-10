@@ -1,2 +1,12 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h1>Edit User</h1>
+
+<%if flash[:messages]%>
+    <%=flash[:messages][0]%>
+<%end%>
+<%= form_for @user do |f| %>
+  Name: <%= f.text_field :name%><br />
+  Username: <%= f.text_field :username%><br />
+  Password: <%= f.password_field :password, placeholder: "Enter Password"%><br />
+  Confirm Password: <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %><br />
+  <%= f.submit "Edit"%>
+<% end %>

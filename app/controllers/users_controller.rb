@@ -29,6 +29,18 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    if @user.save
+      redirect_to user_path(@user)
+    else 
+      flash.now[:messages] = @user.errors.full_messages
+      render :edit
+    end
   end
 
   private
