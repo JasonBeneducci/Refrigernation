@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  skip_before_action :require_login, only: [:new, :create]
+
   def index
     @users = User.all
   end
@@ -23,7 +25,6 @@ class UsersController < ApplicationController
       flash.now[:messages] = @user.errors.full_messages
       render :new
     end
-
     # If we are creating a new user, fridge is empty so prompt a message
   end
 

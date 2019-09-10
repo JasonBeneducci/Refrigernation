@@ -1,6 +1,5 @@
 class CartController < ApplicationController
-  before_action :require_login
-  
+
   def index
     @fruits = Fruit.all
   end
@@ -21,9 +20,4 @@ class CartController < ApplicationController
     redirect_to user_path(user)
   end
 
-  private
-
-  def require_login
-    return head(:forbidden) unless session.include? :user_id
-  end
 end

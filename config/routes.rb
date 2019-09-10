@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   get "/cart", to: "cart#index",as: "cart"
   post "/cart", to: "cart#my_cart", as: "my_cart"
 
-  resources :users
+  resources :users, except: [:index]
   resources :fruits, only: [:index, :show]
-  resources :items
+  resources :items, only: [:show]
   resources :smoothies, only: [:index, :show]
   
 
