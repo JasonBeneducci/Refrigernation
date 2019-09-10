@@ -1,12 +1,11 @@
 <h1>Please add fruits to your cart</h1>
-<%@fruits.each do |fruit|%>
-    <%=form_for fruit do |f|%>
+<%= form_tag(my_cart_path) do %>
+    <%@fruits.each do |fruit| %>
         <%=fruit.name%><br>
         <%=fruit.image%><br>
-        Quantity: <br>
-        
+       <br>Quantity: <%=number_field_tag "fruits[#{fruit.id}]", 0%><br>
     <%end%>
+    <%=submit_tag "Submit order"%>
 <%end%>
-
 
 

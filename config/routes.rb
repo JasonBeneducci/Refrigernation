@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   delete "/login", to: "sessions#destroy", as: "logout"
 
   get "/cart", to: "cart#index",as: "cart"
+  post "/cart", to: "cart#my_cart", as: "my_cart"
 
   resources :users
   resources :fruits, only: [:index, :show]
