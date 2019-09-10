@@ -3,7 +3,7 @@
     <%@fruits.each do |fruit| %>
         <%=fruit.name%><br>
         <%=fruit.image%><br>
-       <br>Quantity: <%=number_field_tag "fruits[#{fruit.id}]", 0%><br>
+       <br>Quantity: <%=number_field_tag "fruits[#{fruit.id}]", 0, min: 0%><br>
     <%end%>
     <%=submit_tag "Submit order"%>
 <%end%>
