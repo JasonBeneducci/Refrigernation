@@ -1,12 +1,24 @@
-<h1>User Log In</h1>
+<div class="text-center">
+  <div class="login-form">
+    <h1>User Log In</h1>
+    <br>
 
-<%if flash[:messages]%>
-    <%=flash[:messages]%>
-<%end%>
+    <%= form_for @user, url: "/login" do |f| %>
+      Username: <%= f.text_field :username, placeholder:"Enter Username"%><br />
+      <br>
+      Password: <%= f.password_field :password, placeholder:"Enter Password" %><br />
+      <br>
+      <%= f.submit "Log In", class: 'btn btn-primary'%>
+    <% end %>
+  
+    <br>
+    <br>
+    
+    <%if flash[:messages]%>
+          <font color="red"><%= flash[:messages]%> </font>
+    <%end%>
 
+  </div>
+  
+</div>
 
-<%= form_for @user, url: "/login" do |f| %>
-  Username: <%= f.text_field :username, placeholder:"Enter Username"%><br />
-  Password: <%= f.password_field :password, placeholder:"Enter Password" %><br />
-  <%= f.submit "Log In"%>
-<% end %>
