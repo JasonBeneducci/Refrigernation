@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'cart/index'
-  get "/welcome", to: "welcome#index"
   get "/login", to: "sessions#new", as: "login"
   post "/login", to: "sessions#create"
   delete "/login", to: "sessions#destroy", as: "logout"
