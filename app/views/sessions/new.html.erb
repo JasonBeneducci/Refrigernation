@@ -4,6 +4,7 @@
     <%=flash[:messages]%>
 <%end%>
 
+
 <%= form_for @user, url: "/login" do |f| %>
   Username: <%= f.text_field :username, placeholder:"Enter Username"%><br />
   Password: <%= f.password_field :password, placeholder:"Enter Password" %><br />
