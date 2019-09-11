@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    # Render the user's fridge with individualized items
     @user = User.find(params[:id])
     @fruits = @user.fruits
   end
