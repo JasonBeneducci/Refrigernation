@@ -3,6 +3,6 @@
 <br><br>
 <%=form_tag(make_smoothie_path, method: :get) do%>
     Quantity: <%=number_field_tag name="smoothie_servings", value=1, min: 1, numericality: {greater_than: 0} %>
-    <%=submit_tag "Make Smoothie"%>
+    <%=submit_tag "Make Smoothie", name: nil%>
 <%end%>
 
