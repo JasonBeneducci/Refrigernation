@@ -14,17 +14,20 @@
  *= require_self
  */
 
+.app-font {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .login-form {
-    position: fixed;
-    top: 40%;
-    left: 85%;
-    transform: translate(-40%, -50%);
-    padding: 2vh;
     background-color: lightblue;
     outline-style: solid;
     outline-width: medium;
     outline-color: blue;
     overflow: auto;
+    margin-top: 6vh;
+    margin-left: 7vh;
+    margin-right: 11vh;
+    padding: 7vh;
 }
 
 .signup-form {
@@ -46,7 +49,8 @@
 
 .fridge-img {
     height: 85vh;
-    padding-left: 34.5vw;
+    margin-left: 34.5vw;
+    border-radius: 50vw;
 }
 
 .fridge-content-grid {
@@ -72,8 +76,7 @@
 }
 
 .user-info {
-    color: black;
-    font-family: impact-bold;
+    color: blue;
     font-size: medium;
     font-weight: bold;
     padding-left: 61vw;
@@ -81,4 +84,49 @@
     top: 38vh;
 }
 
+.smoothie-header {
+    text-align: center;
+    padding: 5vh;
+    background-color: lightgray;
+    color: blue;
+    font-size: 40vh;
+}
     
+.smoothies-show-page {
+    display: grid;
+    grid-auto-flow: row;
+    background-color: lightblue;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 2vw;
+    grid-template-columns: 15vw 15vw 15vw;
+    grid-template-rows: 10vh 10vh 10vh 10vh;
+    grid-column-gap: 5vw;
+    grid-row-gap: 5vh;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.smoothies-show-item {
+    background-color: lightgray;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.smoothie-image-size {
+    height: 75vh;
+    width: auto;
+    border-radius: 10px;
+}
+
+.login-image {
+    height: 75vh;
+    width: auto;
+    
+}
+
+#logo {
+    font-size: 5vh;
+}
+

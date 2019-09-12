@@ -1,6 +1,10 @@
-<h1>List of Smoothies</h1>
-<ul>
+<div class="smoothie-header">
+    <h1>List of Smoothies</h1>
+</div>
+
+
+<div class="smoothies-show-page">
 <%@smoothies.each do |smoothie|%>
-    <li><%=link_to smoothie.name, smoothy_path(smoothie)%></li>
+    <div class="smoothies-show-item"><%=link_to smoothie.name, smoothy_path(smoothie)%></div>
 <%end%>
-</ul>
+</div>
