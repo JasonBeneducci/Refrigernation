@@ -1,12 +1,46 @@
-<h1>Create a New User</h1>
 
-<%if flash[:messages]%>
-    <%=flash[:messages][0]%>
-<%end%>
-<%= form_for @user do |f| %>
-  Name: <%= f.text_field :name, placeholder: "Enter Name"%><br />
-  Username: <%= f.text_field :username, placeholder: "Enter Username" %><br />
-  Password: <%= f.password_field :password, placeholder: "Enter Password" %><br />
-  Confirm Password: <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %><br />
-  <%= f.submit "Sign Up"%>
-<% end %>
+
+
+<!--
+<style>
+body {
+  background-image: url("https://nationwideappliancerepairs.com.au/wp-content/uploads/2018/12/samsung-fridge.jpg"); 
+  background-repeat: no-repeat;
+  background-size: 75%;
+}
+</style>
+-->
+
+
+<div class="signup-image">
+
+  <div class="text-center">
+    <div class="signup-form">
+
+      <h3>Create a New User</h3>
+      <br>
+      
+      <div class="signup-text">
+        <%= form_for @user do |f| %>
+          Name: <%= f.text_field :name, placeholder: "Enter Name"%><br />
+          <br>
+          Username: <%= f.text_field :username, placeholder: "Enter Username" %><br />
+          <br>
+          Password: <%= f.password_field :password, placeholder: "Enter Password" %><br />
+          <br>
+          Confirm Password: <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %><br />
+          <br>
+      </div>    
+
+          <%= f.submit "Sign Up", class: 'btn btn-secondary'%>
+        <% end %>
+      
+
+      <br>
+      <%if flash[:messages]%>
+          <%=flash[:messages][0]%>
+      <%end%>
+
+    </div>
+  </div>
+</div>

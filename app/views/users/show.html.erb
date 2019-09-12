@@ -1,7 +1,23 @@
-<h1><%=@user.name%>'s Refrigerator</h1>
-<h3>Username: <%=@user.username%></h3>
-<%=button_to "See Fruit Dictionary", fruits_path, method: :get%>
-<%=button_to "Make Smoothies", smoothies_path, method: :get%>
+<nav class="navbar navbar-default"
+    style="background-color:lightgray;">
+    <div class="navbar-header">
+        <a class="navbar-brand" 
+            style="color:cyan;
+                   font-family:impact-body;
+                   font-size:85px;
+                   background-color:blue;
+                   border-radius: 25px;"
+        >
+            Refrigernation
+        </a>
+    </div>
+    <a class="nav-link" href="/fruits">See Fruit Dictionary</a>
+    <a class="nav-link" href="/smoothies">Make Smoothies</a>
+    <a class="nav-link" href="/cart">Buy More Fruits</a>
+    <%=button_to "Edit Account", edit_user_path(@user), method: :get, class: "btn btn-info"%>
+    <%=button_to "Log Out", logout_path, method: :delete, class: "btn btn-info"%>
+</nav>
+
 <%if flash[:messages] && flash[:messages].length > 0%>
     <h3>Insufficient fruits to create smoothies:</h3>
     <ul>
@@ -10,11 +26,19 @@
         <%end%>
     </ul>
 <%end%>
-<%=button_to "Buy More", cart_path, method: :get%>
-<ul>
-    <%@fruits.each do |fruit|%>
-        <li><font size="50"><%=link_to fruit.image, item_path(Item.find_by(fruit: fruit, user: @user))%></font></li>
-    <%end%>
-</ul>
-<%=button_to "Edit Account", edit_user_path(@user), method: :get%>
-<%=button_to "Log Out", logout_path, method: :delete%>
+
+<div class=kitchen-image>
+    <img class="fridge-img" src="https://us.123rf.com/450wm/goodstudio/goodstudio1801/goodstudio180100248/94471018-stock-vector-empty-refrigerator-with-opened-door-shelves-and-trays-isolated-on-white-background-fridge-with-freez.jpg?ver=6"/>
+    <div class="user-info">
+        <%="#{@user.name}'s Fridge"%>
+    </div>
+    <div class="fridge-content-grid">
+        <%@fruits.each do |fruit|%>
+            <div class="fridge-content-item">
+            <%=link_to fruit.image, item_path(Item.find_by(fruit: fruit, user: @user))%>
+            </div>
+        <%end%>
+    </div>
+</div>
+
+

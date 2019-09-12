@@ -1,24 +1,35 @@
-<div class="text-center">
-  <div class="login-form">
-    <h1>User Log In</h1>
-    <br>
+<style>
+body {
+  background-image: url("https://nationwideappliancerepairs.com.au/wp-content/uploads/2018/12/samsung-fridge.jpg"); 
+  background-repeat: no-repeat;
+  background-size: 75%;
+}
+</style>
 
-    <%= form_for @user, url: "/login" do |f| %>
-      Username: <%= f.text_field :username, placeholder:"Enter Username"%><br />
-      <br>
-      Password: <%= f.password_field :password, placeholder:"Enter Password" %><br />
-      <br>
-      <%= f.submit "Log In", class: 'btn btn-primary'%>
-    <% end %>
-  
-    <br>
-    <br>
-    
-    <%if flash[:messages]%>
-          <font color="red"><%= flash[:messages]%> </font>
-    <%end%>
+<div class="container-fluid">
+  <div column="col-sm">
+    <div class="text-center">
+      <div class="login-form">
+        <h3>User Log In</h3>
+        <br>
 
+        <%= form_for @user, url: "/login" do |f| %>
+          Username: <%= f.text_field :username, placeholder:"Enter Username"%><br />
+          <br>
+          Password: <%= f.password_field :password, placeholder:"Enter Password" %><br />
+          <br>
+          <%= f.submit "Log In", class: 'btn btn-primary'%>
+        <% end %>
+        
+        <br>
+        <%=button_to "Sign Up", new_user_path, method: :get, class: 'btn btn-secondary'%>
+      
+        <br><br>
+        <%if flash[:messages]%>
+              <font color="red"><%= flash[:messages]%> </font>
+        <%end%>
+
+      </div>
+    </div>
   </div>
-  
 </div>
-
