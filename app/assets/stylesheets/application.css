@@ -58,11 +58,11 @@
     grid-auto-flow: row;
     grid-template-columns: 3vw 3vw 3vw 3vw;
     grid-template-rows: 8vh 7.5vh 6.3vh 6vh 6vh;
-    grid-column-gap: .3vw;
+    grid-column-gap: .4vw;
     grid-row-gap: 2.5vh;
     position: absolute;
-    top: 37vh;
-    left: 43.5vw;
+    top: 29vh;
+    left: 43vw;
 }
 
 .fridge-content-item {
@@ -73,15 +73,16 @@
 .kitchen-image {
     /* background-image: url("https://www.whirlpool.com/content/dam/business-unit/whirlpool/en-us/marketing-content/site-assets/page-content/kitchen-clp/refresh/kitchen_refrigeration_top-2.jpg"); */
     background-color: lightblue;
+    margin-bottom:0;
 }
 
 .user-info {
     color: blue;
-    font-size: medium;
+    font-size: .9vw;
     font-weight: bold;
-    padding-left: 61vw;
+    padding-left: 59vw;
     position: absolute;
-    top: 38vh;
+    top: 30vh;
 }
 
 .smoothie-header {
@@ -111,6 +112,9 @@
 .smoothies-show-item {
     background-color: lightgray;
     border-radius: 10px;
+    font-size: 2.5vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     text-align: center;
 }
 
@@ -130,3 +134,55 @@
     font-size: 5vh;
 }
 
+#fruits-style {
+    grid-template-columns: 15vw 15vw 15vw 15vw;
+    grid-template-rows: 10vh 10vh 10vh 10vh 10vh;
+    grid-column-gap: 3vw;
+    grid-row-gap: 5vh;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#dumb-background {
+    background-repeat: repeat;
+}
+
+.errors-container {
+    display: flex;
+    background-color: red;
+    height: auto;
+    width: fit-content;
+    border-radius: 20px;
+
+}
+
+.errors-container-items {
+    font-size:2vh;
+    color: blue;
+}
+
+#cart-item-container{
+    display: grid;
+    grid-auto-flow: row;
+    background-color: lightblue;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 2vw;
+    grid-template-columns: 12vw 12vw 12vw 12vw;
+    grid-template-rows: 10vh 10vh 10vh 10vh 10vh;
+    grid-column-gap: 5vw;
+    grid-row-gap: 13vh;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    padding:3vh;
+}
+
+.cart-items {
+    background-color: lightgray;
+    border-radius: 10px;
+    text-align: center;
+    margin: 2vh;
+    
+}

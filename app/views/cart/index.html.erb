@@ -1,16 +1,19 @@
 <div class="smoothie-header">
-    <h1>Please add fruits to your refrigerator</h1>
+    <h1>Add Goodness to your Refrigerator</h1>
 </div>
-  
-    <%= form_tag(my_cart_path) do %>
+
+        <%= form_tag(my_cart_path) do %>
+            <div id="cart-item-container">
                 <%@fruits.each do |fruit| %>
-                        <%=fruit.name%><br>
-                        <%=fruit.image%><br>
-                        <br>Quantity: <%=number_field_tag "fruits[#{fruit.id}]", 0, min: 0%><br>
-                
+                    <div class="cart-items">
+                        <font size="4px"><%=fruit.name%></font><br>
+                        <font size="20px"><%=fruit.image%></font><br>
+                        <br><font size="4px"> Quantity: <%=number_field_tag "fruits[#{fruit.id}]", 0, min: 0%></font><br>
+                    </div>
                 <%end%>
-            <%=submit_tag "Submit order"%>
-    <%end%>
+                <center><%=submit_tag "Submit order"%></center>
+            </div>
+        <%end%>
 
 
 

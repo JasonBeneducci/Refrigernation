@@ -1,6 +1,9 @@
-<h1>All Fruits</h1>
-<ul>
-    <%@fruits.each do |fruit|%>
-        <li><%=link_to fruit.name, fruit_path(fruit)%></li>
-    <%end%>
-</ul>
+<div class="smoothie-header">
+    <h1>All Fruits</h1>
+</div>
+
+    <div class="smoothies-show-page" id="fruits-style">
+        <%@fruits.each do |fruit|%>
+            <div class="smoothies-show-item"><%=link_to fruit.name, fruit_path(fruit)%></div>
+        <%end%>
+    </div>

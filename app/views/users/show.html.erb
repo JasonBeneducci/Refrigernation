@@ -18,27 +18,30 @@
     <%=button_to "Log Out", logout_path, method: :delete, class: "btn btn-info"%>
 </nav>
 
-<%if flash[:messages] && flash[:messages].length > 0%>
-    <h3>Insufficient fruits to create smoothies:</h3>
-    <ul>
-        <%flash[:messages].each do |message|%>
-            <li><%=message%></li>
-        <%end%>
-    </ul>
-<%end%>
-
-<div class=kitchen-image>
-    <img class="fridge-img" src="https://us.123rf.com/450wm/goodstudio/goodstudio1801/goodstudio180100248/94471018-stock-vector-empty-refrigerator-with-opened-door-shelves-and-trays-isolated-on-white-background-fridge-with-freez.jpg?ver=6"/>
-    <div class="user-info">
-        <%="#{@user.name}'s Fridge"%>
+    <div class=kitchen-image>
+        <div class="errors-container">
+            <%if flash[:messages] && flash[:messages].length > 0%>
+                <font-size="60px"><h3>Insufficient Fruits to Create this Smoothie:</h3></font>
+                      <ul>  
+                        <%flash[:messages].each do |message|%>
+                            <div class="errors-container-items">
+                                <li><%=message%></li>
+                            </div>
+                        <%end%>
+                    </ul>
+            <%end%>
+        </div>
+        
+        <img class="fridge-img" src="https://us.123rf.com/450wm/goodstudio/goodstudio1801/goodstudio180100248/94471018-stock-vector-empty-refrigerator-with-opened-door-shelves-and-trays-isolated-on-white-background-fridge-with-freez.jpg?ver=6"/>
+        <div class="user-info">
+            <%="#{@user.name}'s Fridge"%>
+        </div>
+        <div class="fridge-content-grid">
+            <%@fruits.each do |fruit|%>
+                <div class="fridge-content-item">
+                <%=link_to fruit.image, item_path(Item.find_by(fruit: fruit, user: @user))%>
+                </div>
+            <%end%>
+        </div>
     </div>
-    <div class="fridge-content-grid">
-        <%@fruits.each do |fruit|%>
-            <div class="fridge-content-item">
-            <%=link_to fruit.image, item_path(Item.find_by(fruit: fruit, user: @user))%>
-            </div>
-        <%end%>
-    </div>
-</div>
-
 

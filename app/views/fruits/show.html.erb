@@ -1,2 +1,17 @@
-<h1><%=@fruit.name%> Nutrition Facts</h1>
-<h3><%=@fruit.description%></h3>
+<div class="smoothie-header">
+    <h1><%="#{@fruit.image} #{@fruit.name}"%> Nutrition Facts <%=@fruit.image%></h1>
+</div>
+
+<%2024.times do%>
+        <%=@fruit.image%>
+<%end%>
+    <br>
+    <br>
+    <center><h2><%=@fruit.description%></h2>
+    </center>
+    <br>
+    <br>
+<%2024.times do%>
+    <%=@fruit.image%>
+<%end%>
+        

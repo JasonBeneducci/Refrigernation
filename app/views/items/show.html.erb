@@ -1,2 +1,16 @@
-<h1><%="#{@item.user.name}'s #{@item.fruit.name}"%></h1>
-<h3>Quantity: <%=@item.quantity%></h3>
+<div class="smoothie-header">
+    <h1><%="#{@item.fruit.image}#{@item.user.name}'s #{@item.fruit.name}(s)#{@item.fruit.image}"%></h1>
+</div>
+
+<%2024.times do%>
+    <%=@item.fruit.image%>
+<%end%>
+    <br>
+    <br>
+<center><h2>Quantity: <font color="red"><%=@item.quantity%></font></h2></center>
+    <br>
+    <br>
+<%2024.times do%>
+    <%=@item.fruit.image%>
+<%end%>
+        
