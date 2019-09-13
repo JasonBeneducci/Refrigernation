@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
           @user = User.new
           flash.now[:messages] = "Username of password is incorrect. Please try again"
           render :new
-        end
+        end 
     end
   end
 
