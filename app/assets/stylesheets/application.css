@@ -25,7 +25,7 @@
     outline-color: blue;
     overflow: auto;
     margin-top: 6vh;
-    margin-left: 7vh;
+    margin-left: 11vh;
     margin-right: 11vh;
     padding: 7vh;
 }
@@ -50,9 +50,9 @@
 .fridge-img {
     height: 85vh;
     margin-left: 34.5vw;
-    border-radius: 50vw;
+    border-radius: 10vw;
     position: relative;
-    top: 25vh;
+    top: 1vh;
 }
 
 .fridge-content-grid {
@@ -63,7 +63,7 @@
     grid-column-gap: .4vw;
     grid-row-gap: 2.5vh;
     position: relative;
-    top: -46vh;
+    top: -69vh;
     left: 43vw;
 }
 
@@ -78,7 +78,7 @@
     font-weight: bold;
     padding-left: 59vw;
     position: relative;
-    top: -43vh;
+    top: -66vh;
 }
 
 .kitchen-image {
@@ -152,11 +152,14 @@
 }
 
 .errors-container {
+    position: absolute;
+    top:5vh;
     display: flex;
-    background-color: red;
+    background-color:lighskyblue;
     height: auto;
     width: fit-content;
-    border-radius: 20px;
+    border-radius: 7px;
+    left:5vh;
 
 }
 
@@ -187,5 +190,5 @@
     border-radius: 10px;
     text-align: center;
     margin: 2vh;
-    
+
 }

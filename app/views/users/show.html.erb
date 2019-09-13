@@ -11,26 +11,25 @@
             Refrigernation
         </a>
     </div>
-    <a class="nav-link" href="/fruits">See Fruit Dictionary</a>
-    <a class="nav-link" href="/smoothies">Make Smoothies</a>
-    <a class="nav-link" href="/cart">Buy More Fruits</a>
-    <%=button_to "Edit Account", edit_user_path(@user), method: :get, class: "btn btn-info"%>
-    <%=button_to "Log Out", logout_path, method: :delete, class: "btn btn-info"%>
+    <a class="nav-link" href="/fruits" 
+        style="color:blue;
+        font-family:impact-body;
+        font-size:50px;">See Fruit Dictionary</a>
+    
+    <a class="nav-link" href="/smoothies" style="color:blue;
+        font-family:impact-body;
+        font-size:50px;">Make Smoothies</a>
+
+    <a class="nav-link" href="/cart"style="color:blue;
+        font-family:impact-body;
+        font-size:50px;">Buy More Fruits</a>
+
+    <%=button_to "Edit Account", edit_user_path(@user), method: :get, class: "btn btn-info btn-lg"%>
+    <%=button_to "Log Out", logout_path, method: :delete, class: "btn btn-info btn-lg"%>
 </nav>
 
     <div class=kitchen-image>
-        <div class="errors-container">
-            <%if flash[:messages] && flash[:messages].length > 0%>
-                <font-size="60px"><h3>Insufficient Fruits to Create this Smoothie:</h3></font>
-                      <ul>  
-                        <%flash[:messages].each do |message|%>
-                            <div class="errors-container-items">
-                                <li><%=message%></li>
-                            </div>
-                        <%end%>
-                    </ul>
-            <%end%>
-        </div>
+        
         <img class="fridge-img" src="https://us.123rf.com/450wm/goodstudio/goodstudio1801/goodstudio180100248/94471018-stock-vector-empty-refrigerator-with-opened-door-shelves-and-trays-isolated-on-white-background-fridge-with-freez.jpg?ver=6"/> 
         <div class="user-info">
             <%="#{@user.name}'s Fridge"%>
@@ -40,6 +39,18 @@
                 <div class="fridge-content-item">
                 <%=link_to fruit.image, item_path(Item.find_by(fruit: fruit, user: @user))%>
                 </div>
+            <%end%>
+        </div>
+         <div class="errors-container">
+            <%if flash[:messages] && flash[:messages].length > 0%>
+                <font-size="60px"><h3>Insufficient Fruits to Create this Smoothie:</h3></font>
+                      <ul>  
+                        <%flash[:messages].each do |message|%>
+                            <div class="errors-container-items">
+                                <li><%=message%></li>
+                            </div>
+                        <%end%>
+                    </ul>
             <%end%>
         </div>
     </div>
