@@ -58,13 +58,13 @@
 .fridge-content-grid {
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: 3vw 3vw 3vw 3vw;
+    grid-template-columns: 3.5vw 3.5vw 3.5vw 3.5vw;
     grid-template-rows: 8vh 7.5vh 6.3vh 6vh 6vh;
     grid-column-gap: .4vw;
     grid-row-gap: 2.5vh;
     position: relative;
     top: -69vh;
-    left: 43vw;
+    left: 44vw;
 }
 
 .fridge-content-item {
@@ -74,9 +74,9 @@
 
 .user-info {
     color: blue;
-    font-size: .9vw;
+    font-size: 1vw;
     font-weight: bold;
-    padding-left: 59vw;
+    margin-left: 62vw;
     position: relative;
     top: -66vh;
 }
